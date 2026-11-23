@@ -397,27 +397,64 @@
 
   /* ===== 聯絡我們 ===== */
   .contact-box {
-    background: #f7fcfb;
+    background: linear-gradient(135deg, #f7fcfb 0%, #eef9f8 100%);
     border: 1px solid var(--primary-light);
+    border-left: 5px solid var(--primary);
     border-radius: 16px;
-    padding: 30px;
-    text-align: center;
+    padding: 28px 32px;
+    text-align: left;
   }
-  .contact-box p {
-    margin-bottom: 12px;
-    font-size: 1.05rem;
-    display: flex;
-    justify-content: center;
+  .contact-badge {
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 18px;
   }
-  .contact-box p:last-child { margin-bottom: 0; }
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    text-align: left;
+  }
+  .contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border: 1px solid var(--primary-light);
+    color: var(--primary-dark);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
   .contact-box a {
     color: var(--primary);
     text-decoration: none;
     font-weight: 700;
+    border-bottom: 1px dashed rgba(29, 166, 158, 0.5);
   }
   .contact-box a:hover { color: var(--primary-dark); }
+  .contact-tip {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: rgba(233, 196, 106, 0.16);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    text-align: left;
+  }
 
   /* ===== 報名 ===== */
   .qr-wrap {
@@ -473,6 +510,7 @@
     .poster { border-radius: 12px; margin: 20px auto 10px; }
     .cond-illustration { margin-top: 20px; border-radius: 10px; }
     .time-list li { font-size: 0.95rem; }
+    .contact-box { padding: 22px 20px; }
   }
 </style>
 </head>
@@ -523,12 +561,12 @@
       您的參與完全出於自願，所有資料僅供學術分析使用，並以去識別化方式處理，不會影響您原本在心理治療中心的輪候安排或服務質素。
     </p>
     
-    <!-- 海報圖片展示 (檔名已改為 M-web.png) -->
+    <!-- 海報圖片展示 -->
     <img src="M-web.png" alt="MOMENT 研究海報" class="poster">
     
-    <!-- PDF 下載連結 (若你也有 M-web.pdf 可保留此按鈕) -->
+    <!-- PDF 下載連結 -->
     <div class="pdf-download">
-      <a href="M-web.pdf" target="_blank" class="pdf-btn">下載完整海報 (PDF)</a>
+      <a href="M-flyer.pdf" target="_blank" download class="pdf-btn">下載完整海報 (PDF)</a>
     </div>
     
     <p class="illustration-caption">MOMENT 生活點滴與心理健康研究</p>
@@ -795,12 +833,22 @@
   <section id="contact">
     <h2>七、聯絡我們</h2>
     <div class="contact-box">
-      <p><strong>電話：</strong> <a href="tel:+85368804495">+853 6880 4495</a></p>
-      <p><strong>電郵：</strong> <a href="mailto:maklabstudies@gmail.com">maklabstudies@gmail.com</a></p>
-      <p><strong>聯絡時間：</strong> 星期一至六，早上 10:00 至 晚上 10:00（公眾假期除外）</p>
-      <p style="margin-top: 20px; font-size: 0.95rem; color: var(--text-light);">
-        您可以在任何時間發送電郵給我們，我們看到後會盡快回覆（通常於 1 個工作日內）。
-      </p>
+      <div class="contact-badge">✦ 研究團隊支援資訊</div>
+      <div class="contact-item">
+        <span class="contact-icon">☎</span>
+        <div><strong>電話：</strong> <a href="tel:+85368804495">+853 6880 4495</a></div>
+      </div>
+      <div class="contact-item">
+        <span class="contact-icon">✉</span>
+        <div><strong>電郵：</strong> <a href="mailto:maklabstudies@gmail.com">maklabstudies@gmail.com</a></div>
+      </div>
+      <div class="contact-item" style="margin-bottom: 0;">
+        <span class="contact-icon">◷</span>
+        <div><strong>聯絡時間：</strong> 星期一至六，早上 10:00 至 晚上 10:00（公眾假期除外）</div>
+      </div>
+      <div class="contact-tip">
+        💡 <strong>貼心提示：</strong>您可以在任何時間發送電郵給我們，我們看到後會盡快回覆（通常於 1 個工作日內）。來信或來電時若能附上您的參與者編號，有助更快為您查詢。
+      </div>
     </div>
   </section>
 
