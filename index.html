@@ -221,6 +221,28 @@
     margin-bottom: 20px;
   }
 
+  /* PDF 下載按鈕 */
+  .pdf-download {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .pdf-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    border: 1px solid var(--primary);
+  }
+  .pdf-btn:hover {
+    background-color: var(--primary);
+    color: #fff;
+  }
+
   /* ===== 步驟時間軸 ===== */
   .step { position: relative; padding-left: 60px; margin-bottom: 36px; }
   .step:last-child { margin-bottom: 0; }
@@ -501,7 +523,14 @@
       您的參與完全出於自願，所有資料僅供學術分析使用，並以去識別化方式處理，不會影響您原本在心理治療中心的輪候安排或服務質素。
     </p>
     
-    <img src="poster-M-web.png" alt="MOMENT 研究海報" class="poster">
+    <!-- 海報圖片展示 (檔名已改為 M-web.png) -->
+    <img src="M-web.png" alt="MOMENT 研究海報" class="poster">
+    
+    <!-- PDF 下載連結 (若你也有 M-web.pdf 可保留此按鈕) -->
+    <div class="pdf-download">
+      <a href="M-web.pdf" target="_blank" class="pdf-btn">下載完整海報 (PDF)</a>
+    </div>
+    
     <p class="illustration-caption">MOMENT 生活點滴與心理健康研究</p>
   </section>
 
